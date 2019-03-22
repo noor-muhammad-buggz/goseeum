@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{$pageTitle}} - {{ config('app.name', 'Goseeum') }}</title>
+
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-reboot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('Bootstrap/dist/css/bootstrap-grid.css') }}">
+
+    <!-- Main Styles CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/main.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.min.css') }}">
+
+    <!-- Main Font -->
+    <script src="{{ asset('js/webfontloader.min.js') }}"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto:300,400,500,700:latin']
+            }
+        });
+    </script>
+
+</head>
+<body class="body-bg-white">
+
+<div class="main-header-fullwidth main-header-has-header-standard">
+    <!-- Header Standard Landing  -->
+    <div class="header--standard home-header header--standard-landing" id="header--standard">
+        <div class="container">
+            <div class="header--standard-wrap">
+                <a href="{{url('/')}}" class="logo">
+                    <div class="img-wrap">
+                        <img src="img/logo.png" alt="Gosseum">
+                    </div>
+                    <div class="title-block">
+                        <h6 class="logo-title"></h6>
+                        <div class="sub-title"></div>
+                    </div>
+                </a>
+    
+                <div class="nav nav-pills nav1 header-menu expanded-menu">
+                    <div class="mCustomScrollbar">
+                        <ul class="main-menu">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#howitworks" class="nav-link">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#features" class="nav-link">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#blog" class="nav-link">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url('login')}}" class="nav-link">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{url('register')}}" class="nav-link orange-rounded">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ... end Header Standard Landing  -->
+    {{-- <div class="header-spacer--standard"></div> --}}
+</div>
+
+@yield('content')
+
+<!-- Footer Full Width -->
+<div class="footer footer-full-width" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <!-- Widget List -->
+                <div class="widget w-list">
+                    <h6 class="title">Product</h6>
+                    <ul>
+                        <li>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Press</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- ... end Widget List -->
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="widget w-list">
+                    <h6 class="title">Company</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Overview</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">   
+                <div class="widget w-list">
+                    <h6 class="title">Resource</h6>
+                    <ul>
+                        <li>
+                            <a href="#">News</a>
+                        </li>
+                        <li>
+                            <a href="#">Dcumentation</a>
+                        </li>
+                        <li>
+                            <a href="#">Faq</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> 
+                <div class="widget w-list">
+                    <h6 class="title">Contact</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Email us</a>
+                        </li>
+                        <li>
+                            <a href="#">Tweet Faulkner</a>
+                        </li>
+                        <li>
+                            <a href="#">Visit the office</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <!-- Widget About -->
+                <div class="widget w-about">
+                    <a href="{{url('/')}}" class="logo">
+                        <div class="img-wrap">
+                            <img src="img/logo.png" alt="Goseeum" width="200">
+                        </div>
+                        <div class="title-block">
+                            <h6 class="logo-title"></h6>
+                            <div class="sub-title"></div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ... end Widget About -->
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!-- SUB Footer -->
+                <div class="sub-footer-copyright">
+                    <span>
+                        Copyright <a href="{{url('/')}}">Goseeum</a> All Rights Reserved 2018
+                    </span>
+                </div>
+              <!-- ... end SUB Footer -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ... end Footer Full Width -->
+
+<a class="back-to-top" href="#">
+    <img src="{{ asset('svg-icons/back-to-top.svg') }}" alt="arrow" class="back-icon">
+</a>
+
+<!-- JS Scripts -->
+<script src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+<script src="{{ asset('js/jquery.appear.js') }}"></script>
+<script src="{{ asset('js/jquery.mousewheel.js') }}"></script>
+<script src="{{ asset('js/perfect-scrollbar.js') }}"></script>
+<script src="{{ asset('js/jquery.matchHeight.js') }}"></script>
+<script src="{{ asset('js/svgxuse.js') }}"></script>
+<script src="{{ asset('js/imagesloaded.pkgd.js') }}"></script>
+<script src="{{ asset('js/Headroom.js') }}"></script>
+<script src="{{ asset('js/velocity.js') }}"></script>
+<script src="{{ asset('js/ScrollMagic.js') }}"></script>
+<script src="{{ asset('js/jquery.waypoints.js') }}"></script>
+<script src="{{ asset('js/jquery.countTo.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/material.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-select.js') }}"></script>
+<script src="{{ asset('js/smooth-scroll.js') }}"></script>
+<script src="{{ asset('js/selectize.js') }}"></script>
+<script src="{{ asset('js/swiper.jquery.js') }}"></script>
+<script src="{{ asset('js/moment.js') }}"></script>
+<script src="{{ asset('js/daterangepicker.js') }}"></script>
+<script src="{{ asset('js/simplecalendar.js') }}"></script>
+<script src="{{ asset('js/fullcalendar.js') }}"></script>
+<script src="{{ asset('js/isotope.pkgd.js') }}"></script>
+<script src="{{ asset('js/ajax-pagination.js') }}"></script>
+<script src="{{ asset('js/Chart.js') }}"></script>
+<script src="{{ asset('js/chartjs-plugin-deferred.js') }}"></script>
+<script src="{{ asset('js/circle-progress.js') }}"></script>
+<script src="{{ asset('js/loader.js') }}"></script>
+<script src="{{ asset('js/run-chart.js') }}"></script>
+<script src="{{ asset('js/jquery.magnific-popup.js') }}"></script>
+<script src="{{ asset('js/jquery.gifplayer.js') }}"></script>
+<script src="{{ asset('js/mediaelement-and-player.js') }}"></script>
+<script src="{{ asset('js/mediaelement-playlist-plugin.min.js') }}"></script>
+
+<script src="{{ asset('js/base-init.js') }}"></script>
+<script defer src="{{ asset('fonts/fontawesome-all.js') }}"></script>
+
+<script src="{{ asset('Bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
+
+<script type="text/javascript">
+    //Scroll to top.
+    jQuery('ul.main-menu li.nav-item a').on('click', function () {
+        var scroll = 0;
+        var elem = $(this).attr('href');
+        if(elem !== '#home') {
+            var position = $(elem).position();
+            scroll = position.top;
+        }
+
+        $('html,body').animate({
+            scrollTop: scroll
+        }, 1200);
+        return false;
+    });    
+</script>
+
+</body>
+</html>
