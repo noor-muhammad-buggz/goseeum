@@ -30,6 +30,25 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
 .left-icons{
     margin-top: 30%;
 }
+.post-add-icon {
+    fill: #715959 !important;
+    color: #442b2b !important;
+}
+.post-additional-info{
+    padding: 10px 0 0 !important;
+}
+.post {
+    padding: 25px 25px 10px !important;
+}
+.control-icon {
+    margin-right: 12px !important;
+}
+.control-icon>svg{
+    height: 20px !important;
+}
+.post p {
+    margin: 15px 0 0;
+}
 </style>
 @section('content')
 
@@ -135,7 +154,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
 <div class="container">
     <div class="row">
         <!-- Main Content -->
-        <div class="col-xl-6 order-xl-2 col-lg-12 order-lg-1 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xl-6 order-xl-2 col-lg-12 order-lg-1 col-md-12 col-sm-12 col-xs-12 nopadding">
             <div id="newsfeed-items-grid">
             <div id="posts_content_section">
                     @if(count($posts) > 0)
@@ -262,6 +281,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                                     {{$cmnt->created_at->diffForHumans()}}
                                                 </time>
                                             </div>
+                                            <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p>
                                         </div>
 
                                         @if($cmnt->commentuser->id == Auth::user()->id)
@@ -281,7 +301,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                         @endif
                                     </div>
 
-                                    <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p>
+                                    <!-- <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p> -->
 
                                     <!-- <a href="#" class="post-add-icon inline-items">
                                         <svg class="olymp-heart-icon"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-heart-icon') }}"></use></svg>
@@ -293,7 +313,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                 @if(count($post->postcomments) < $post->postcomments()->count())
                                 <p class="text-center p-0 m-0 load_more_comments_{{$post->post_id}} load_more_comments" data-target="{{$post->post_id}}" data-page="1">
                                     <a href="#" class="post-add-icon inline-items">
-                                        <span>load more comments</span>
+                                        <span style="color: #666">Load More Comments</span>
                                     </a>
                                 </p>
                                 @endif

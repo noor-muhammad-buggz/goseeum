@@ -49,7 +49,28 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
     left: -16px;
     cursor: pointer;
 }
-
+.post-add-icon {
+    fill: #715959 !important;
+    color: #442b2b !important;
+}
+.post-additional-info {
+    padding: 10px 0 0 !important;
+}
+.post {
+    padding: 25px 25px 10px !important;
+}
+@media only screen and (max-width: 768px){
+    button#preview_btn {
+    float: left;
+    margin-left: 6px;
+}
+button#post_btn {
+    float: left;
+}
+a.options-message {
+    margin-left: 10px;
+}
+}
 </style>
 @section('content')
 
@@ -226,6 +247,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                                     {{$cmnt->created_at->diffForHumans()}}
                                                 </time>
                                             </div>
+                                            <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p>
                                         </div>
 
                                         @if($cmnt->commentuser->id == Auth::user()->id)
@@ -245,7 +267,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                         @endif
                                     </div>
 
-                                    <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p>
+                                    <!-- <p class="cmnt_list_item_body_{{$cmnt->comment_id}}_{{$cmnt->comment_parent_id}}">{{$cmnt->comment_body}}</p> -->
 
                                     <!-- <a href="#" class="post-add-icon inline-items">
                                         <svg class="olymp-heart-icon"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-heart-icon') }}"></use></svg>
@@ -257,7 +279,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                 @if(count($post->postcomments) < $post->postcomments()->count())
                                 <p class="text-center p-0 m-0 load_more_comments_{{$post->post_id}} load_more_comments" data-target="{{$post->post_id}}" data-page="1">
                                     <a href="#" class="post-add-icon inline-items">
-                                        <span>load more comments</span>
+                                        <span>Load More Comments</span>
                                     </a>
                                 </p>
                                 @endif

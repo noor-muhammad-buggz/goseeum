@@ -12,11 +12,17 @@ $pageTitle = 'Saved Locations';
 .ml-2{
     margin-left: 2px;
 }
+a.btn.btn-orange, a.btn.btn-danger.del-location {
+    padding: 5px 7px !important;
+}
 </style>
 @section('content')
 
 {{-- LIST TYPE IMPLEMENTATION --}}
 <div class="container">
+    <div class="ui-block-title">
+        <h4 class="title">Saved Locations</h4>
+    </div>
     <div class="col-xl-12 order-xl-2 col-lg-12 order-lg-2 col-md-12 order-md-1 col-sm-12 col-xs-12">
         <div class="ui-block">
             <div class="ui-block-title">

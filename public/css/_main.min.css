@@ -6,7 +6,8 @@ select.form-control:not([size]):not([multiple]) {
 
 .mapinfo_bk_ch{
     background: rgba(57, 158, 236, 0.8) !important;
-    border-radius: 15px !important;
+    /* border-radius: 15px !important; */
+    border-radius: unset !important;
 }
 
 .mapinfo{
@@ -938,8 +939,9 @@ a{
     padding: 0;
 }
 .control-icon .accept-request {
-    padding: .5rem;
-    font-size: .688rem;
+    /* padding: .5rem; */
+    padding: .2rem;
+    font-size: .488rem;
     color: #fff;
     display: inline-block;
 }
@@ -10757,7 +10759,7 @@ blockquote p::before {
     background-color: #ea4235;
 }
 .c-white {
-    color: #fff;
+    color: #fff !important;
 }
 .c-grey {
     color: #888da8;

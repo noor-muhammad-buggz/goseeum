@@ -27,14 +27,150 @@
             }
         });
     </script>
+    <style>
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+@media  screen and (max-width: 768px){
+    #mySidebars{
+        display: block !important;
+    }
+    .openbtn{
+        display: block !important;
+    }
+    .main-header-has-header-standard{
+        display: none;
+    }
+    button.navbar-toggle {
+    background: transparent;
+    border: 0;
+    margin-top: 13px;
+    float: right;
+}
+a.logo.navbar-brand.pull-left {
+    float: left;
+}
+.categories-section .container-fluid .full-images img{
+    height: auto !important;
+}
+.categories-section .container-fluid .half-images, .categories-section .container-fluid .full-images{
+    height: auto;
+}
+.col-xl-4.col-lg-4.col-md-6.col-sm-12.col-xs-12 {
+    margin-bottom: 10px;
+}
+.post-content.no-padding .author-thumb {
+    vertical-align: bottom;
+    margin-bottom: 30px;
+}
+.post-content.no-padding {
+    margin-bottom: 30px;
+}
+.col-xl-7.col-lg-7.m-auto.col-md-12.col-sm-12.col-xs-12{
+    margin-bottom: 30px !important;
+}
+.sub-footer-copyright{
+    margin-top: 0px;
+}
+.post-additional-info{
+    display: inherit !important;
+}
+}
+</style>
 
 </head>
 <body class="body-bg-white">
-
+    <nav class="navbar" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="{{url('/')}}" class="logo navbar-brand pull-left">
+                    <div class="img-wrap">
+                        <img src="img/logo.png" alt="Gosseum"  width="170">
+                    </div>
+                    <div class="title-block">
+                        <h6 class="logo-title"></h6>
+                        <div class="sub-title"></div>
+                    </div>
+                </a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#home" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#howitworks" class="nav-link">How It Works</a></li>
+            <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#blog" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="{{url('login')}}" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="{{url('register')}}" class="nav-link orange-rounded">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 <div class="main-header-fullwidth main-header-has-header-standard">
+
     <!-- Header Standard Landing  -->
     <div class="header--standard home-header header--standard-landing" id="header--standard">
         <div class="container">
+            
+
             <div class="header--standard-wrap">
                 <a href="{{url('/')}}" class="logo">
                     <div class="img-wrap">
@@ -73,6 +209,7 @@
                         </ul>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -89,7 +226,7 @@
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                 <!-- Widget List -->
                 <div class="widget w-list">
-                    <h6 class="title">Product</h6>
+                    <h5 class="title">Product</h5>
                     <ul>
                         <li>
                             <a href="#">About us</a>
@@ -107,7 +244,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                 <div class="widget w-list">
-                    <h6 class="title">Company</h6>
+                    <h5 class="title">Company</h5>
                     <ul>
                         <li>
                             <a href="#">Overview</a>
@@ -123,7 +260,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">   
                 <div class="widget w-list">
-                    <h6 class="title">Resource</h6>
+                    <h5 class="title">Resource</h5>
                     <ul>
                         <li>
                             <a href="#">News</a>
@@ -139,7 +276,7 @@
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> 
                 <div class="widget w-list">
-                    <h6 class="title">Contact</h6>
+                    <h5 class="title">Contact</h5>
                     <ul>
                         <li>
                             <a href="#">Email us</a>
@@ -168,19 +305,19 @@
                     </a>
                 </div>
                 <!-- ... end Widget About -->
-            </div>
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <!-- SUB Footer -->
-                <div class="sub-footer-copyright">
-                    <span>
-                        Copyright <a href="{{url('/')}}">Goseeum</a> All Rights Reserved 2018
-                    </span>
-                </div>
-              <!-- ... end SUB Footer -->
-            </div>
+            </div>            
         </div>
     </div>
+
+</div>
+<div class="clearfix">
+<!-- SUB Footer -->
+<div class="sub-footer-copyright">
+    <span>
+        Copyright <a href="{{url('/')}}">Goseeum</a> All Rights Reserved 2018
+    </span>
+</div>
+<!-- ... end SUB Footer -->
 </div>
 <!-- ... end Footer Full Width -->
 
@@ -242,7 +379,7 @@
             scrollTop: scroll
         }, 1200);
         return false;
-    });    
+    });   
 </script>
 
 </body>

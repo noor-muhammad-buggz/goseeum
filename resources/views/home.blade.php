@@ -11,8 +11,8 @@ $pageTitle = 'Home';
 	<div class="container-fluid">
 		<div class="row display-flex">
 			<div class="col-xl-9 m-auto col-lg-9 col-md-12 col-sm-12 col-xs-12">
-				<div class="landing-content">
-					<h3 class="mb10">Find Nearby Attractions</h3>
+				<div class="landing-content text-center">
+					<h2 class="mb10 mt25">Find Nearby Attractions</h2>
 					<p class="mb0">Explore top-rated attrections, activities and more</p>
 				</div>
 
@@ -41,11 +41,11 @@ $pageTitle = 'Home';
 {{-- end home search form --}}
 
 <!-- section categories -->
-<section class="categories-section">
+<section class="categories-section medium-padding80">
 	<div class="container-fluid">
 		<div class="row mb30">
 			<div class="col-xs-12 m-auto">
-				<h4 class="text-center">Popular Categories</h4>
+				<h3 class="text-center">Popular Categories</h3>
 				<p class="text-center">Browse the most desirable categories</p>
 			</div>
 		</div>
@@ -73,7 +73,7 @@ $pageTitle = 'Home';
 		<div class="row mb30">
 			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-center mb0">
-					<h4 class="h4 heading-title mb0">Most Visited Places</h4>
+					<h3 class="heading-title mb0">Most Visited Places</h3>
 					<p class="heading-text mt0">Discover top-rated local buisnesses</p>
 				</div>
 			</div>
@@ -149,25 +149,25 @@ $pageTitle = 'Home';
 {{-- end section most visited --}}
 
 {{-- section plan vacation --}}
-<section class="medium-padding80 bg-grey-lime" id="howitworks">
+<section class="medium-padding80" id="howitworks">
 	<div class="container">
 		<div class="row mb30">
 			<div class="col-xl-6 col-lg-6 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-center mb0">
-					<h4 class="h4 heading-title mb0">Plan The Vacation of Your Dreams</h4>
+					<h3 class="heading-title mb0">Plan The Vacation of Your Dreams</h3>
 					<p class="heading-text mt0">Plan the vacations of your dreams at best and attractive places</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row finding">
 			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
 				<!-- Post -->
 				<article class="hentry blog-post">
 					<div class="post-thumb mb30 text-center h3 c-twitter">
 						<i class="fa fa-map-pin"></i>
 					</div>
-					<p class="c-grey bold text-center">Find Intresting Place</p>
+					<h4 class="c-grey text-center">Find Intresting Place</h4>
 					<p class="text-center">Plan the vacations of your dreams at best and attractive places</p>
 				</article>	
 				<!-- ... end Post -->
@@ -179,7 +179,7 @@ $pageTitle = 'Home';
 					<div class="post-thumb mb30 text-center h3 c-twitter">
 						<i class="fa fa-envelope"></i>
 					</div>
-					<p class="c-grey bold text-center">Contact a Few Owners</p>
+					<h4 class="c-grey text-center">Contact a Few Owners</h4>
 					<p class="text-center">Plan the vacations of your dreams at best and attractive places</p>
 				</article>	
 				<!-- ... end Post -->
@@ -191,7 +191,7 @@ $pageTitle = 'Home';
 					<div class="post-thumb mb30 text-center h3 c-twitter">
 						<i class="fa fa-user"></i>
 					</div>
-					<p class="c-grey bold text-center">Make a Reservation</p>
+					<h4 class="c-grey text-center">Make a Reservation</h4>
 					<p class="text-center">Plan the vacations of your dreams at best and attractive places</p>
 				</article>	
 				<!-- ... end Post -->
@@ -208,14 +208,14 @@ $pageTitle = 'Home';
 		<div class="row mb30">
 			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-center mb0">
-					<h3 class="h3 heading-title mb0">Our Latest News</h3>
-					<p class="heading-text mb0 mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h3 class="heading-title mb0">Our Latest News</h3>
+					<p class="heading-text mb0 mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 bg-red-light no-padding outline10">
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 bg-orange no-padding outline10">
 				<!-- Post -->
 				<article class="hentry blog-post">
 					<div class="post-thumb">
@@ -267,7 +267,7 @@ $pageTitle = 'Home';
 				<!-- ... end Post -->
 			</div>
 
-			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 bg-red-light no-padding outline10">
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 bg-orange no-padding outline10">
 				<!-- Post -->
 				<article class="hentry blog-post">
 					<div class="post-thumb">
@@ -321,8 +321,8 @@ $pageTitle = 'Home';
 		<div class="row mb30">
 			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-center mb0">
-					<h4 class="h4 heading-title mb0">What People Say</h4>
-					<p class="heading-text mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+					<h3 class="heading-title mb0">What People Say</h3>
+					<p class="heading-text mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 				</div>
 			</div>
 		</div>
@@ -398,11 +398,11 @@ $pageTitle = 'Home';
 	<div class="container">
 		<div class="row">
 
-			<div class="col-xl-6 col-lg-6 m-auto col-md-12 col-sm-12 col-xs-12">
+			<div class="col-xl-7 col-lg-7 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-justify mb0">
-					<h4 class="h4 heading-title mb0">Available on iOS and Android</h4>
+					<h3 class="heading-title mb0">Available on iOS and Android</h3>
 					<p class="heading-text mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
-					<a href="javascript:;" class="btn bg-choco text-left">
+					<a href="javascript:;" class="btn btn-orange text-left">
 						<span class="weight-light">AVAILABLE ON THE</span><br>
 						<span class="bold">APP STORE</span>
 					</a>
@@ -413,10 +413,10 @@ $pageTitle = 'Home';
 				</div>
 			</div>
 
-			<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			<div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12">
 				<!-- Post -->
 				<article class="hentry blog-post">
-					<div class="post-thumb text-left c-twitter">
+					<div class="post-thumb text-center c-twitter">
 						<img src="img/image4.png" alt="screen" style="width: 300px;">
 					</div>
 				</article>	
@@ -436,7 +436,7 @@ $pageTitle = 'Home';
 
 			<div class="col-xl-6 col-lg-6 m-auto col-md-12 col-sm-12 col-xs-12">
 				<div class="crumina-module crumina-heading align-center mb0 c-grey">
-					<h4 class="h4 heading-title mb0">Integration</h4>
+					<h3 class="heading-title mb0">Integration</h3>
 					<p class="heading-text mt0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					<a href="javascript:;" class="btn bg-twitter">
 						<img src="{{ asset('svg-icons/google.svg') }}" alt="arrow" width="25">
@@ -462,17 +462,25 @@ $pageTitle = 'Home';
 {{-- end section integration --}}
 
 {{-- section newsletter --}}
-<section class="medium-padding60 bg-white">
+<section class="medium-padding60 bg-orange">
 	<div class="container">
 		<div class="row">
+			<div class="col-md-12">
+				<h3 class="heading-text text-center landing-content text-capitalize" style="line-height: 32px;"><b>Subscribe to be the first one to know about updates<br> new features and much more!</b></h3>
+			</div>
 			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 m-auto">
-				<div class="crumina-module crumina-heading c-grey-light">
-					<p class="heading-text">Subscribe to be the first one to know about updates, new features and much more!
-					</p>
+				<div class="crumina-module crumina-heading c-grey-light">					
+					<form class="form-inline subscribe-form" method="post">
+						<div class="form-group label-floating is-empty">
+							<label class="control-label">Enter your email</label>
+							<input class="form-control bg-white" placeholder="" type="email">
+						</div>
+						<button class="btn btn-blue btn-lg">Subscribe</button>
+					</form>
 				</div>	
 			</div>
 
-			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+			<!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
 				<form class="form-inline subscribe-form" method="post">
 					<div class="form-group label-floating is-empty">
 						<label class="control-label">Enter your email</label>
@@ -480,7 +488,7 @@ $pageTitle = 'Home';
 					</div>
 					<button class="btn btn-blue btn-lg">Send</button>
 				</form>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </section>

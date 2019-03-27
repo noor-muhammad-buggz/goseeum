@@ -9,6 +9,9 @@ $pageTitle = 'Locations';
 .padding3{
     padding:3px;
 }
+a.btn.btn-orange, a.btn.btn-danger.del-location {
+    padding: 5px 7px !important;
+}
 </style>
 @section('content')
 

@@ -27,7 +27,17 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
     left: -16px;
     cursor: pointer;
 }
-
+button.btn.bg-danger.can_fr_req {
+    margin-right: 0;
+    width: 50%;
+    border-radius: 0;
+}
+button.btn.bg-blue.acc_fr_req{
+    margin-right: 0;
+    width: 50%;
+    border-radius: 0;
+    float: left;
+}
 </style>
 @section('content')
 

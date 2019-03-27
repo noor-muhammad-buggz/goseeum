@@ -2,6 +2,21 @@
 $pageTitle = 'Search Locations';
 @endphp
 @extends('layouts.user')
+<style >
+    .registration-login-form {
+    border-radius: 50px !important;
+}
+.home-search-form .form-inline .form-group .input-group button {
+    border-radius: 50px;
+    font-weight: normal;
+    margin-left: 3px;
+}
+@media only screen and (max-width: 768px){
+    .registration-login-form{
+        padding-top: 6px !important;
+    }
+}
+</style>
 @section('content')
 
 @if(isset($_GET['location']) && count($locations) > 0)
@@ -57,13 +72,13 @@ $pageTitle = 'Search Locations';
 	<div class="row display-flex">
 		<div class="m-auto col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 			<!-- Login-Registration Form  -->
-			<div class="registration-login-form">
-				<div class="title h6">Search locations</div>
-				<form method="GET" action="" class="content form-horizontal">
+			<div class="registration-login-form" style="margin-top: 20%;">
+<!-- 				<div class="title h6">Search Locations</div>
+ -->				<!-- <form method="GET" action="" class="content form-horizontal">
 					<div class="row">
 						<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
 							<div class="form-group  is-empty">
-								<label class="control-label">Subject</label>
+								<label class="control-label">Place</label>
 								<input type="text" class="form-control{{ $errors->has('subject') ? ' is-invalid' : '' }}" name="subject" value="{{ (isset($_GET['subject'])) ? $_GET['subject'] : '' }}" autofocus>
 							</div>
 						</div>
@@ -80,11 +95,26 @@ $pageTitle = 'Search Locations';
 						<div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
 							<div class="form-group">
 								<label class="control-label"><span style="visibility: hidden;">Search</span></label>
-								<button type="submit" class="btn btn-orange">GO</button>
+								<button type="submit" class="btn btn-orange d-block">GO</button>
 							</div>
 						</div>
 					</div>
-				</form>
+				</form> -->
+                <div class="home-search-form" >
+                    <form class="form-inline" method="GET" action="">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control col-md-5{{ $errors->has('subject') ? ' is-invalid' : '' }}" type="text" placeholder="What are you looking for?" name="subject" value="{{ (isset($_GET['subject'])) ? $_GET['subject'] : '' }}">
+                                <select class="form-control{{ $errors->has('location') ? ' is-invalid' : '' }}" name="location">
+                                    @foreach($cities as $city)
+									    <option value="{{$city->city_name.'-'.$city->city_id}}" {{ (isset($_GET['location']) && $_GET['location'] == $city->city_name.'-'.$city->city_id) ? 'selected' : '' }}>{{ucfirst($city->city_name)}}</option>
+									@endforeach
+                                </select>
+                                <button type="submit" class="btn btn-orange">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 			</div>
 			<!-- ... end Login-Registration Form  -->		
 		</div>

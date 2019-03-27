@@ -86,23 +86,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{url('user/photos')}}">
-						<svg class="olymp-multimedia-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Photos Album"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-multimedia-icon') }}"></use></svg>
-					</a>
-				</li>
-				<li>
 					<a href="{{url('user/search/people')}}">
 						<svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="Search People"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-happy-face-icon') }}"></use></svg>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/privacy')}}">
-						<svg class="olymp-thunder-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Privacy Policy"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-thunder-icon') }}"></use></svg>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/terms')}}">
-						<svg class="olymp-check-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Terms of use"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-check-icon') }}"></use></svg>
 					</a>
 				</li>
 			</ul>
@@ -158,27 +143,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{url('user/photos')}}">
-						<svg class="olymp-multimedia-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="Photos Album"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-multimedia-icon') }}"></use></svg>
-						<span class="left-menu-title">Photos Album</span>
-					</a>
-				</li>
-				<li>
 					<a href="{{url('user/search/people')}}">
 						<svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="Search People"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-happy-face-icon') }}"></use></svg>
 						<span class="left-menu-title">Search People</span>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/privacy')}}">
-						<svg class="olymp-thunder-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Privacy Policy"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-thunder-icon') }}"></use></svg>
-						<span class="left-menu-title">Privacy Policy</span>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/terms')}}">
-						<svg class="olymp-check-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Terms of use"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-check-icon') }}"></use></svg>
-						<span class="left-menu-title">Terms of use</span>
 					</a>
 				</li>
 			</ul>
@@ -270,27 +237,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="{{url('user/photos')}}">
-						<svg class="olymp-multimedia-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Photos Album"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-multimedia-icon') }}"></use></svg>
-						<span class="left-menu-title">Photos Album</span>
-					</a>
-				</li>
-				<li>
 					<a href="{{url('user/search/people')}}">
 						<svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="Search People"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-happy-face-icon') }}"></use></svg>
 						<span class="left-menu-title">Search People</span>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/privacy')}}">
-						<svg class="olymp-thunder-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Privacy Policy"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-thunder-icon') }}"></use></svg>
-						<span class="left-menu-title">Privacy Policy</span>
-					</a>
-				</li>
-				<li>
-					<a href="{{url('user/terms')}}">
-						<svg class="olymp-check-icon left-menu-icon" data-toggle="tooltip" data-placement="right"   data-original-title="Terms of use"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-check-icon') }}"></use></svg>
-						<span class="left-menu-title">Terms of use</span>
 					</a>
 				</li>
 			</ul>
@@ -448,7 +397,9 @@
 				</div>
 			</div> -->
 			<div class="control-icon more has-items">
-				<svg class="olymp-thunder-icon"><use xlink:href="{{ asset('svg-icons/sprites/icons.svg#olymp-thunder-icon') }}"></use></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="70" viewBox="0 0 192 192"style=" fill:#000000;">
+					<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,192v-192h192v192z" fill="#3f4257"></path><g fill="#ffffff"><path d="M157.44,15.36c-3.3024,0 -6.4131,1.0761 -8.9475,2.8425c3.6096,2.112 6.9489,4.6848 9.9825,7.68c4.3392,4.416 7.839,9.4809 10.335,15.2025c2.496,-2.7264 3.99,-6.333 3.99,-10.365c0,-8.4864 -6.8736,-15.36 -15.36,-15.36zM123.8025,19.2c-11.0592,0 -21.4248,4.3023 -29.22,12.0975l-17.7075,17.6625c-2.9568,2.9952 -12.7452,7.7181 -42.39,13.1325c-3.7248,0.6912 -7.6398,1.6107 -10.635,4.5675c-0.1152,0.1536 -0.2307,0.2748 -0.3075,0.39c-0.1536,0.1152 -0.2757,0.2232 -0.3525,0.3l-0.915,1.0425l-0.12,0.4575c-8.832,12.9408 2.6097,39.4797 28.2225,65.0925c19.8528,19.8144 40.2495,31.1775 54.4575,31.1775c4.1472,0 7.7541,-0.9957 10.6725,-2.9925l0.615,-0.1575l0.8025,-0.8025c0.1152,-0.1152 0.2298,-0.2364 0.345,-0.39l0.39,-0.345c2.9568,-2.9568 3.8763,-6.8718 4.5675,-10.635c5.4144,-29.6064 10.1373,-39.3957 13.1325,-42.3525l17.6625,-17.7075c7.7952,-7.7952 12.0975,-18.1608 12.0975,-29.22c0,-5.5296 -1.0773,-10.8639 -3.1125,-15.8175c-2.0736,-4.9152 -5.1066,-9.4857 -8.985,-13.4025c-7.8336,-7.7952 -18.1992,-12.0975 -29.22,-12.0975zM122.88,38.4c2.112,0 3.84,1.728 3.84,3.84c0,2.112 -1.728,3.84 -3.84,3.84c-1.8816,0 -6.8316,0.6498 -12.63,6.525l-1.8825,1.965c-5.184,5.2608 -13.8279,14.0517 -17.4375,17.3925c-5.568,5.0688 -19.5792,8.6028 -33.48,11.79l-2.805,0.615c-0.3072,0.0768 -0.6162,0.1125 -0.885,0.1125c-1.7664,0 -3.3435,-1.1886 -3.7275,-2.955c-0.4992,-2.0736 0.7689,-4.1517 2.8425,-4.6125l2.8425,-0.6525c8.2944,-1.92 25.4997,-5.8353 29.9925,-9.9825c3.4944,-3.1872 12.0528,-11.9001 17.16,-17.1225l1.92,-1.92c7.8336,-7.9872 15.2484,-8.835 18.09,-8.835zM50.7675,144.885c-2.9184,3.3792 -4.6875,7.755 -4.6875,12.555c0,10.5984 8.6016,19.2 19.2,19.2c7.1808,0 13.4376,-3.9582 16.74,-9.795c-9.9456,-4.6848 -20.6157,-12.1296 -31.2525,-21.96z"></path></g></g>
+				</svg>
 
 				<!-- <div class="label-avatar bg-blue noti_count hidden"></div> -->
 

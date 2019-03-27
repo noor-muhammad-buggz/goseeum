@@ -104,7 +104,7 @@ $pageTitle = 'Chat/Messages';
                                     </div>
                                 </form>
                                 <div class="add-options-message">
-                                    <button class="btn btn-orange btn-sm send-chat-message" type="button">Post Reply</button>
+                                    <button class="btn btn-orange btn-sm send-chat-message" type="button">Reply</button>
                                 </div>
                             </div>
                             {{-- end chat form section --}}

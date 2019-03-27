@@ -37,7 +37,9 @@ span.file-item .scene-inner-file-item{
     left: -16px;
     cursor: pointer;
 }
-
+.mt50{
+   margin-top:  30px !important;
+}
 </style>
 @section('content')
 
@@ -127,7 +129,7 @@ span.file-item .scene-inner-file-item{
             <div id="newsfeed-items-grid">
                 <div class="ui-block mb0">
                     <!-- start time slots -->
-                    <article class="grey-block">
+                    <article class="grey-block" style="background-color: #f5f5f5 !important;">
                         @if($location->location_type == 'buisness')
                         <div class="row">
                             <div class="col-sm-12">
@@ -221,7 +223,7 @@ span.file-item .scene-inner-file-item{
 	                    <!-- start of description section -->
                         <div class="row">
                             <div class="col-sm-12">
-        	                    <h5 class="mb10 mt50">Description</h5>
+        	                    <h5 class="mb10">Description</h5>
         	                    <p class="mb10">{{$location->location_description}}</p>
                                 <p class="mb30 mt20">
         	                       <!-- <a href="" class="btn btn-success bg-light-brown normal-font">Read more...</a> -->

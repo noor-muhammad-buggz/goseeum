@@ -27,14 +27,19 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
     left: -16px;
     cursor: pointer;
 }
-
+.friend-header-thumb {
+    max-height: 100px;
+}
 </style>
 @section('content')
 
 <!-- start search area section -->
 <div class="container mt20">
 	<div class="row">
-		<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-xl-12">
+            <h4 class="text-center">Please type something and search</h4>
+        </div>
+		<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 0 auto;">
 			<div class="ui-block responsive-flex">
 				<div class="ui-block-title">
 					<div class="h6 title">Search People</div>
@@ -57,10 +62,10 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
 <div class="container">
 	<div class="row">
         @if(empty($search))
-            <div class="col-xl-12">
+<!--             <div class="col-xl-12">
                 <p class="text-center">Please type something and search</p>
             </div>
-        @elseif(!empty($search))
+ -->        @elseif(!empty($search))
             @if(count($people) > 0)
                 @foreach($people as $user)
                     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-6">
@@ -93,7 +98,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
                                         </div>
                                     </div>
                                     <div class="control-block-button" data-swiper-parallax="-100">
-                                        <button class="btn bg-blue send-friend-request" data-target="{{$user->id}}">Send Request</button>
+                                        <button class="btn bg-blue send-friend-request" data-target="{{$user->id}}" style="width: 100%; font-weight: 400;border-radius: 0;">Send Request</button>
                                     </div>
                                 </div>
                             </div>	
