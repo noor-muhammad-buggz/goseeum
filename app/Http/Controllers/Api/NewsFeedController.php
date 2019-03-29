@@ -390,12 +390,12 @@ class NewsFeedController extends Controller
     */
     public function GetPost($post_id) {
         $baseUrl = url('uploads');
-        $post = Posts::where(['post_id' => $post_id])->selectRaw("post_id, COALESCE(post_content) as content, created_at, user_id")->first();
+        $post = Posts::where(['post_id' => $post_id])->selectRaw("post_id, COALESCE(post_content) as post_content, created_at, user_id")->first();
         if(!empty($post)) {
             $post['media'] = array();
             $media = $post->postmeta()->selectRaw("meta_id as id, CONCAT('$baseUrl', '/', meta_url) as url, post_id")->get();
             if(count($media) > 0) {
-                $post['media'] = array_map(function($p){ return ['url' => $p['url'], 'id' => $p['id']]; }, $media->toArray());
+                $post['media'] = array_map(function($p){ return ['url' => $p['url'], 'id' => $p['id'], 'post_id' => $p['post_id']]; }, $media->toArray());
             }
         }
         return $post;
@@ -437,11 +437,17 @@ class NewsFeedController extends Controller
         $is_exist = Likes::where(['like_user_id' => $user_id, 'like_parent_id' => $data['post_id']])->first();
         if(empty($is_exist)) {
             try {
-                $likes_count = Likes::where(['like_parent_id' => $data['post_id'], 'like_status' => 1])->get();
-                $response['status'] = \Config::get('app.success_status');
-                $response['message'] = 'You liked the post successfully';
-                $response['data']->is_liked = $post->postlikes()->where(['like_status' => 1, 'like_user_id' => $user_id])->count();
-                $response['data']->postlikes = $post->postlikes()->count();
+                $like = Likes::create(['like_status' => 1 ,'like_parent_id' => $data['post_id'], 'like_user_id' => $user_id]);
+                if($like) {
+                    $response['status'] = \Config::get('app.success_status');
+                    $response['message'] = 'You liked the post successfully';
+                    $response['data']->is_liked = $post->postlikes()->where(['like_status' => 1, 'like_user_id' => $user_id])->count();
+                    $response['data']->postlikes = $post->postlikes()->count();
+                }
+                else {
+                    $response['status'] = \Config::get('app.failure_status');
+                    $response['message'] = 'Unable to like the post at the moment';
+                }
             }
             catch (\PDOException $e) {
                 $response['status'] = \Config::get('app.failure_status');

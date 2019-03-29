@@ -152,12 +152,18 @@ class NotificationController extends Controller
                 );
                 $this->SendPushNotification($fields);
             }
+            elseif($user->device_type == 'ios') {
+                // payload for notification
+                $token = $user->device_token;
+                $data = array('data' => $payload, 'alert' => $payload['title'], 'body' => $payload['message'], 'content-available' => '0');
+                $this->SendIOSNotification($token, $data);   
+            }
         }
     }
 
     /*
     |----------------------------------------------------------------------
-    | send push notification to device id
+    | send android push notification to device id
     |----------------------------------------------------------------------
     */
     public function SendPushNotification($fields) {
@@ -183,5 +189,35 @@ class NotificationController extends Controller
         if ($result === FALSE) {}
         Log::info('NOTIFICATION RESPONSE : '.json_encode($result));
         curl_close($ch);
+    }
+
+
+    /*
+    |----------------------------------------------------------------------
+    | send ios push notification to device id
+    |----------------------------------------------------------------------
+    */
+    public function SendIOSNotification($token, $data, $title = '') {
+        try{
+            $apnsHost = 'gateway.sandbox.push.apple.com';
+            // $apnsHost = 'gateway.push.apple.com';
+            $apnsCert = public_path().'/certs/goseeum.pem';
+            $apnsPort = 2195;
+            $apnsPass = '';
+            $payload['aps'] = $data;
+            $output = json_encode($payload);
+            $token = pack('H*', str_replace(' ', '', $token));
+            $apnsMessage = chr(0).chr(0).chr(32).$token.chr(0).chr(strlen($output)).$output;
+            $streamContext = stream_context_create();
+            stream_context_set_option($streamContext, 'ssl', 'local_cert', $apnsCert);
+            stream_context_set_option($streamContext, 'ssl', 'passphrase', $apnsPass);
+            $apns = stream_socket_client('ssl://'.$apnsHost.':'.$apnsPort, $error, $errorString, 2, STREAM_CLIENT_CONNECT, $streamContext);
+            $resp = fwrite($apns, $apnsMessage);
+            fclose($apns);
+            Log::info('IOS NOTIFICATION RESPONSE IS : '.json_encode($resp));
+        }
+        catch(\Exception $ex) {
+            Log::info('IOS NOTIFICATION RESPONSE IS : '.$ex->getMessage());
+        }
     }
 }

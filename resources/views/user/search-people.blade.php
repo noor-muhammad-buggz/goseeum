@@ -30,6 +30,9 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
 .friend-header-thumb {
     max-height: 100px;
 }
+.friend-item-content {
+    padding: 0 !important;
+}
 </style>
 @section('content')
 
@@ -55,6 +58,7 @@ span.file-item .inner-file-item, span.file-item .post-inner-file-item{
 			</div>
 		</div>
 	</div>
+    <br>
 </div>
 <!-- end search area section -->
 

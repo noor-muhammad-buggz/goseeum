@@ -70,6 +70,9 @@ class ChatController extends Controller
     	$conversation = $this->CreateConvIfNotExist($user_id, $friend_id);
 
         $chat = $this->chatObj->get_chat($conversation->conv_id, $user_id, $friend_id)->orderBy('created_at', 'desc')->paginate(15);
+        if(count($chat->items()) > 0) {
+            Chat::whereIn('msg_id', array_column($chat->items(), 'msg_id'))->where('sender_id', '!=', $user_id)->update(array('is_read' => 1));
+        }
         $response['status'] = \Config::get('app.success_status');
     	$response['message'] = 'Here is your chat history';
         $response['data']->conversation = $conversation;

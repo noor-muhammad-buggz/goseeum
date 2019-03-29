@@ -60,11 +60,11 @@ a.btn.btn-orange, a.btn.btn-danger.del-location {
                                     <td>{{$location->location_lang}}</td>
                                     <td>
                                         @if ($location->status == 0)
-                                            <small class="bg-orange c-white padding3 radius-5">Pending</small>
+                                            <small class="bg-orange c-white padding3">Pending</small>
                                         @elseif ($location->status == 1)
-                                            <small class="bg-success c-white padding3 radius-5">Approved</small>
+                                            <small class="bg-success c-white padding3 ">Approved</small>
                                         @elseif ($location->status == 2)
-                                            <small class="bg-danger c-white padding3 radius-5">Rejected <i class="fa fa-info-circle show-reason" data-reason="{{$location->reject_reason}}" style="cursor:pointer;"></i></small>
+                                            <small class="bg-danger c-white padding3 ">Rejected <i class="fa fa-info-circle show-reason" data-reason="{{$location->reject_reason}}" style="cursor:pointer;"></i></small>
                                         @endif
                                     </td>
                                     <td>

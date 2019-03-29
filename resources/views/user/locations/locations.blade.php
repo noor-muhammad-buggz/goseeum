@@ -11,6 +11,16 @@ $pageTitle = 'Search Locations';
     font-weight: normal;
     margin-left: 3px;
 }
+svg.svg-inline--fa.fa-chevron-right.fa-w-10 {
+    top: 7px;
+    position: relative;
+    left: 2px;
+}
+.gm-style .gm-style-iw-c{
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 20px 25px 20px 18px;
+}
 @media only screen and (max-width: 768px){
     .registration-login-form{
         padding-top: 6px !important;
